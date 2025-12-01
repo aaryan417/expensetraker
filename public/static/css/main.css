@@ -55,6 +55,9 @@ h1 {
   font-size: 1.25rem;
 }
 
+
+
+
 h2 {
   font-size: 1.17rem;
 }
@@ -210,4 +213,28 @@ input[type="number"] {
 
 .notification-container p {
   margin: 0;
+}
+header {
+  background: #f8f9fa;       /* हल्का बैकग्राउंड */
+  padding: 10px 20px;
+}
+
+header nav ul.nav-left {
+  list-style: none;
+  display: flex;             /* row-wise layout */
+  gap: 20px;                 /* items के बीच spacing */
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start; /* left align */
+  align-items: flex-start;     /* ऊपर की तरफ align */
+}
+
+header nav ul.nav-left li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+header nav ul.nav-left li a:hover {
+  color: #007bff;
 }

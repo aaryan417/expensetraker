@@ -1,12 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class currentbalence(models.Model):
-    blance=models.FloatField(default=0)
+class Currentbalence(models.Model):
+    balence=models.FloatField(default=0)
 
 
-class transaction(models.Model):
-    balence=models.ForeignKey(currentbalence, on_delete=models.CASCADE)
+class Transaction(models.Model):
+    balence=models.ForeignKey(Currentbalence, on_delete=models.CASCADE)
     amount=models.FloatField()
     expense_type=models.CharField(max_length=10, choices=[
             ('credit', 'credit'),
@@ -16,3 +16,7 @@ class transaction(models.Model):
     created_at=models.DateTimeField(auto_now=True)
     # created_at=models.DateTimeField(auto_now_add=True)
     
+
+
+    def __str__(self) ->str:
+        return f"the amount is {self.amount} for {self.discription}" 
